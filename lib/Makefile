@@ -64,7 +64,7 @@ default: liblz4
 
 all: liblz4
 
-liblz4: lz4.c lz4hc.c lz4frame.c xxhash.c
+liblz4: lz4.c lz4hc.c lz4frame.c xxhash.c lz4g.c
 	@echo compiling static library
 	@$(CC) $(CPPFLAGS) $(CFLAGS) -fPIC -c $^
 	@$(AR) rcs liblz4.a lz4.o lz4hc.o lz4frame.o xxhash.o

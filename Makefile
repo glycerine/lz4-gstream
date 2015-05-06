@@ -44,6 +44,7 @@ LZ4DIR  = lib
 DISTRIBNAME=lz4-$(RELEASE).tar.gz
 
 TEXT =  $(LZ4DIR)/lz4.c $(LZ4DIR)/lz4.h $(LZ4DIR)/lz4hc.c $(LZ4DIR)/lz4hc.h \
+    $(LZ4DIR)/lz4g.c \
 	$(LZ4DIR)/lz4frame.c $(LZ4DIR)/lz4frame.h $(LZ4DIR)/lz4frame_static.h \
 	$(LZ4DIR)/xxhash.c $(LZ4DIR)/xxhash.h \
 	$(LZ4DIR)/liblz4.pc.in $(LZ4DIR)/Makefile $(LZ4DIR)/LICENSE \

@@ -48,6 +48,7 @@ extern "C" {
    Includes
 **************************************/
 #include <stddef.h>   /* size_t */
+#include <stdio.h>    /* FILE* */
 
 
 /**************************************
@@ -83,6 +84,12 @@ typedef struct {
   unsigned         reserved[4];            /* must be zero for forward compatibility */
 } LZ4F_preferences_t;
 
+
+/**************************************
+ * Super simple API usable by Golang for framed lz4 compression.
+ * ************************************/
+int LZ4G_compressFramedFileStream(FILE* finput, FILE* foutput, int compressionLevel, char** errstring, int* nerrbytes);
+int LZ4G_decompressFramedFileStream(FILE* finput, FILE* foutput, char** errstring, int* nerrbytes);
 
 /***********************************
  * Simple compression function
